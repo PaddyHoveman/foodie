@@ -1,10 +1,43 @@
-<nav class="nav-container">
+<header class="nav-container">
   <div class="app-logo"></div>
   <div class="profile">
     <p>{{welcomeMessage}}<span> Paddy Hoveman</span></p>
-    <div class="avatar">
+    <div class="avatar" (click)="openModal($event)">
       <div class="online-status"></div>
       <h4>PH</h4>
     </div>
+    <nav class="toolbar" [ngClass]="hasBeenToggled ? 'display' : 'no-display'" (clickOutside)="closeModal()">
+      <div class="toolbar-section">
+        <ul>
+          <li><a>Post</a></li>
+        </ul>
+      </div>
+      <div role="none" class="dropdown-divider"></div>
+      <div class="toolbar-section">
+        <ul>
+          <li><a>Your profile</a></li>
+          <li><a>Your recipes</a></li>
+          <li><a>Your settings</a></li>
+        </ul>
+      </div>
+      <div role="none" class="dropdown-divider"></div>
+      <div class="toolbar-section flex">
+        <button>Set status</button>
+      </div>
+      <div role="none" class="dropdown-divider"></div>
+      <div class="toolbar-section">
+        <ul>
+          <li><a>Your profile</a></li>
+          <li><a>Your recipes</a></li>
+          <li><a>Your settings</a></li>
+        </ul>
+      </div>
+      <div role="none" class="dropdown-divider"></div>
+      <div class="toolbar-section">
+        <ul>
+          <li><a>Sign out</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</nav>
+</header>
