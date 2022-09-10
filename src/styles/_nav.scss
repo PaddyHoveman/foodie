@@ -1,0 +1,50 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  background: rgb(67, 67, 67);
+
+  .profile {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+
+    p, span {
+      background-color: inherit;
+      font-size: 16px;
+    }
+
+    span {
+      font-weight: 800;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rebeccapurple;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5px;
+      position: relative;
+      cursor: pointer;
+
+      .online-status {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background: $online;
+        border-radius: 50%;
+        border: 3px solid rgb(67, 67, 67);
+        top: 0;
+        right: -10px;
+      }
+
+      h4 {
+        margin: 0;
+        background: inherit;
+      }
+    }
+  }
+}

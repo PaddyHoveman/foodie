@@ -1,7 +1,12 @@
 @import './styles/variables';
+@import './styles/nav';
 
 * {
   background: $background;
   color: white;
   font-family: sans-serif;
+}
+
+body {
+  margin: 0;
 }
