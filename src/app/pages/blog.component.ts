@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 
 @Component({
   selector: 'app-blog',
@@ -8,9 +8,26 @@ import { Component, OnInit } from "@angular/core";
 
 export class BlogComponent implements OnInit {
 
+  @ViewChild('blogText') textInput: ElementRef;
+
+  public file: any
+  public text: string
+
   constructor() {}
 
   ngOnInit(): void {
     
+  }
+
+  addAttachment(event: any) {
+    this.file = event.target.files[0]
+  }
+
+  keyDownFunction(event: KeyboardEvent) {
+    if (event.code !== 'Enter') return
+
+    this.textInput.nativeElement.value = ''
+
+    console.log(this.file, this.text)
   }
 }

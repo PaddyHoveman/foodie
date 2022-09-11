@@ -13,6 +13,7 @@
     p, span {
       background-color: inherit;
       font-size: 16px;
+      margin: 0 5px;
     }
 
     span {
@@ -27,7 +28,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 5px;
       position: relative;
       cursor: pointer;
       transition: 100ms ease-in;
@@ -61,16 +61,27 @@
 
     .toolbar {
       position: absolute;
-      bottom: -435px;
+      bottom: -455px;
       right: -15px;
       background-color: rgb(67, 67, 67);
       transition: 100ms ease-in;
       border-radius: 5px;
       display: none;
       width: 220px;
+      border: 1px solid white;
       -webkit-box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.075);
       -moz-box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.075);
       box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.075);
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 76%;
+        border: 13px solid transparent;
+        border-bottom-color: #434343;
+        z-index: 2;
+      }
 
       &::after {
         content: "";
@@ -78,7 +89,7 @@
         bottom: 100%;
         left: 75%;
         border: 15px solid transparent;
-        border-bottom-color: rgb(67, 67, 67);
+        border-bottom-color: white;
         z-index: 1;
       }
 
@@ -150,14 +161,31 @@
         button {
           border: 1px solid white;
           background: rgb(67, 67, 67);
-          padding: 6px 25px;
+          padding: 4px 25px;
           border-radius: 16px;
           transition: 50ms ease-in;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           cursor: pointer;
+
+          mat-icon {
+            background: inherit;
+            margin-right: 5px;
+          }
+
+          span {
+            margin-left: 5px;
+            font-size: 14px;
+          }
 
           &:hover {
             background: #b7ff4c;
-            color: black;
+            
+            mat-icon,
+            span {
+              color: black;
+            }
           }
         }
       }
