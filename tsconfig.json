@@ -17,6 +17,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true, //already there
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // Add this line
     "target": "es2017",
     "module": "es2020",
     "lib": [
@@ -28,6 +31,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
   }
 }

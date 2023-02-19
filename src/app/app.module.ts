@@ -7,11 +7,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 
 import { BlogComponent } from './pages/blog.component';
-
-import { ClickOutsideDirective } from './directives/click-outside.directive';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon'
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { GameComponent } from './pages/game/game.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 
     // Pages
     BlogComponent,
+    GameComponent,
 
     // Directives
     ClickOutsideDirective,

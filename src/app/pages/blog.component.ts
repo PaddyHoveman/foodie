@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import TestData from './../../assets/test-data.json';
 
 @Component({
   selector: 'app-blog',
@@ -7,16 +8,16 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 })
 
 export class BlogComponent implements OnInit {
-
-  @ViewChild('blogText') textInput: ElementRef;
-
   public file: any
   public text: string
+  public posts: any
+
+  @ViewChild('blogText') textInput: ElementRef;
 
   constructor() {}
 
   ngOnInit(): void {
-    
+    this.posts = TestData
   }
 
   addAttachment(event: any) {
