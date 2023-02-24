@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackButtonComponent } from './components/buttons/back-button.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
-import { GameComponent } from './pages/game/game.component';
+import { GameComponent } from './pages/game/fighter.component';
 import { GamesComponent } from './pages/games/games.component';
 import { MatRipple, MatRippleModule } from '@angular/material/core';
 

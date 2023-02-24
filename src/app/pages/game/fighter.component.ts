@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { Sprite } from "src/app/models/sprite.model";
 
 @Component({
-  selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  selector: 'app-fighter',
+  templateUrl: './fighter.component.html',
+  styleUrls: ['./fighter.component.scss']
 })
 
 export class GameComponent implements OnInit {

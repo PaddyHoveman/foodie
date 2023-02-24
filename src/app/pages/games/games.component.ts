@@ -8,12 +8,13 @@ import { Component, OnInit } from "@angular/core";
 
 export class GamesComponent implements OnInit {
   track: HTMLElement
-  nextPercentage: number
+  nextPercentage: number = 0
 
   constructor() {}
   
   ngOnInit(): void {
     this.track = document.getElementById('game-card-container')!
+    this.animateImages()
   }
 
   public mouseDownHandler(event: MouseEvent) {
@@ -32,10 +33,19 @@ export class GamesComponent implements OnInit {
 
     this.track.animate({
       transform: `translate(${this.nextPercentage}%, -50%)`
-    }, { duration: 1200, fill: "forwards" });
-    
-    const images: any = this.track.getElementsByClassName('image')
+    }, { duration: 1200, fill: "forwards" })
 
+    this.animateImages()
+  }
+
+  public mouseUpHandler() {
+    this.track.dataset['mouseDownAt'] = "0"
+    if (this.nextPercentage) this.track.dataset['prevPercentage'] = this.nextPercentage.toString()
+  }
+
+  private animateImages() {
+    const images: any = this.track.getElementsByClassName('image')
+  
     if (images.length) {
       for (const image of images) {
         image.animate({
@@ -43,10 +53,5 @@ export class GamesComponent implements OnInit {
         }, { duration: 1200, fill: "forwards" })
       }
     }
-  }
-
-  public mouseUpHandler() {
-    this.track.dataset['mouseDownAt'] = "0"
-    if (this.nextPercentage) this.track.dataset['prevPercentage'] = this.nextPercentage.toString()
   }
 }

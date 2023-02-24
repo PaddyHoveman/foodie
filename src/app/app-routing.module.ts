@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { GameComponent } from './pages/game/game.component';
+import { GameComponent } from './pages/game/fighter.component';
 import { GamesComponent } from './pages/games/games.component';
 
 const routes: Routes = [
@@ -17,10 +17,10 @@ const routes: Routes = [
       { path: 'dashboard', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: GamesComponent, data: { title: 'Blog' } },
       {
-        path: 'game',
-        data: { title: 'Game' },
+        path: 'games',
+        data: { title: 'Games' },
         children: [
-          { path: '', redirectTo: 'game', pathMatch: 'full' },
+          { path: '', redirectTo: 'games', pathMatch: 'full' },
           { path: 'fighter', component: GameComponent },
         ]
       },
