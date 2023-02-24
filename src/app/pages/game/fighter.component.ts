@@ -22,8 +22,8 @@ export class GameComponent implements OnInit {
 
     c?.fillRect(0, 0, canvas.width, canvas.height)
 
-    const playerOne = new Sprite({ position: { x: 0, y: 0 }, velocity: { x: 0, y: 0 }}, 'blue', canvas, c!)
-    const playerTwo = new Sprite({ position: { x: 400, y: 0 }, velocity: { x: 0, y: 0 }}, 'green', canvas, c!)
+    const playerOne = new Sprite({ position: { x: 150, y: 0 }, velocity: { x: 0, y: 0 }}, 'blue', canvas, c!)
+    const playerTwo = new Sprite({ position: { x: canvas.width - 150, y: 0 }, velocity: { x: 0, y: 0 }}, 'green', canvas, c!)
 
     const keys = {
       a: { pressed: false },

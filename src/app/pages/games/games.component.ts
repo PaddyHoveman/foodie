@@ -8,13 +8,14 @@ import { Component, OnInit } from "@angular/core";
 
 export class GamesComponent implements OnInit {
   track: HTMLElement
-  nextPercentage: number = 0
+  nextPercentage: number = -50
 
   constructor() {}
   
   ngOnInit(): void {
     this.track = document.getElementById('game-card-container')!
     this.animateImages()
+    this.updateCardLocationHandler(0)
   }
 
   public mouseDownHandler(event: MouseEvent) {
@@ -31,10 +32,7 @@ export class GamesComponent implements OnInit {
 
     this.nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
-    this.track.animate({
-      transform: `translate(${this.nextPercentage}%, -50%)`
-    }, { duration: 1200, fill: "forwards" })
-
+    this.updateCardLocationHandler(1200)
     this.animateImages()
   }
 
@@ -53,5 +51,11 @@ export class GamesComponent implements OnInit {
         }, { duration: 1200, fill: "forwards" })
       }
     }
+  }
+
+  private updateCardLocationHandler(duration: number) {
+    return this.track.animate({
+      transform: `translate(${this.nextPercentage}%, -50%)`
+    }, { duration: duration, fill: "forwards" })
   }
 }

@@ -29,6 +29,12 @@
       &:hover {
         transform: scale(1.02);
       }
+
+      &.disabled {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        pointer-events: none;
+      }
     }
   }
 }
