@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 
-import { BlogComponent } from './pages/blog.component';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { GameComponent } from './pages/game/game.component';
+import { GamesComponent } from './pages/games/games.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { GameComponent } from './pages/game/game.component';
     NavComponent,
 
     // Pages
-    BlogComponent,
+    GamesComponent,
     GameComponent,
 
     // Directives
