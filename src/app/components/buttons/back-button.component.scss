@@ -1,0 +1,28 @@
+
+@import './../../../styles/variables';
+
+button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  box-shadow: $box-shadow;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+  cursor: pointer;
+
+  &:hover {
+    background: $background-two;
+  }
+
+  mat-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: inherit;
+  }
+}

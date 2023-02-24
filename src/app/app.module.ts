@@ -9,9 +9,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BackButtonComponent } from './components/buttons/back-button.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { GameComponent } from './pages/game/game.component';
 import { GamesComponent } from './pages/games/games.component';
+import { MatRipple, MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { GamesComponent } from './pages/games/games.component';
     AppComponent,
     HomeComponent,
     NavComponent,
+    BackButtonComponent,
 
     // Pages
     GamesComponent,
@@ -33,6 +36,7 @@ import { GamesComponent } from './pages/games/games.component';
     BrowserAnimationsModule,
     MatIconModule,
     FormsModule,
+    MatRippleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
